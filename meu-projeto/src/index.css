@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Mangro';
+  src: url('./assets/fonts/mangro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jedira';
+  src: url('./assets/fonts/Jedira-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'Jedira', sans-serif;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
