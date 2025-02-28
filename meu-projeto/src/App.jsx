@@ -1,6 +1,6 @@
 import React from "react";
 import Parallax from "./components/Parallax";
-
+import MyProjects from "./components/MyProjects";
 import Lenis from "lenis";
 import { useEffect } from "react";
 
@@ -18,6 +18,7 @@ const App = () => {
   return (
     <>
       <Parallax />
+      <MyProjects />
     </>
   );
 };

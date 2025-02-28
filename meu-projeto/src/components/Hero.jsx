@@ -2,6 +2,8 @@ import React, { use } from "react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ia from "../assets/iafoto.png";
+
 const Hero = () => {
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -42,7 +44,10 @@ const Hero = () => {
     <div className="sticky top-0 z-0">
       <div className="h-screen relative">
         <div className="absolute h-full flex items-center">
-          <div className="relative flex whitespace-nowrap">
+          <div className="h-screen w-screen flex justify-center items-end">
+            <img src={ia} alt="" className="z-50" />
+          </div>
+          <div className="relative flex whitespace-nowrap font-jedira">
             <p ref={firstText} className="z-0 m-2 text-[228px]">
               Frontend Developer -
             </p>
