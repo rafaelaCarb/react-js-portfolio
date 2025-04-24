@@ -42,8 +42,8 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="h-[120vh]  overflow-hidden">
-      <div className=" grid-dark w-full h-fit py-12 rounded-xl ml-13 mt-24">
+    <div className="h-[120vh] overflow-hidden">
+      <div className="grid-dark w-full h-fit py-12 rounded-xl md:ml-13 mt-24">
         <div className="container mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-16">
             <div className="w-full md:w-1/2 text-white">
@@ -66,7 +66,7 @@ const ContactMe = () => {
                       placeholder="Name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-md bg-white/10 backdrop-blur-sm border-b-2 border-white/30 focus:border-white text-white placeholder-gray-300 focus:outline-none transition-all duration-300 focus:bg-white/15 hover:bg-white/15"
+                      className="w-full px-4 py-3 rounded-md bg-[#292929] backdrop-blur-sm border-b-2 border-white/30 focus:border-white text-white placeholder-gray-300 focus:outline-none transition-all duration-300 focus:bg-white/15 hover:bg-white/15"
                     />
                   </div>
                   <div>
@@ -77,7 +77,7 @@ const ContactMe = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Email"
-                      className="w-full px-4 py-3 rounded-md bg-white/10 backdrop-blur-sm border-b-2 border-white/30 focus:border-white text-white placeholder-gray-300 focus:outline-none transition-all duration-300 focus:bg-white/15 hover:bg-white/15"
+                      className="w-full px-4 py-3 rounded-md bg-[#292929] backdrop-blur-sm border-b-2 border-white/30 focus:border-white text-white placeholder-gray-300 focus:outline-none transition-all duration-300 focus:bg-white/15 hover:bg-white/15"
                     />
                   </div>
                   <div>
@@ -88,7 +88,7 @@ const ContactMe = () => {
                       onChange={handleChange}
                       placeholder="Message"
                       rows="4"
-                      className="w-full px-4 py-3 rounded-md bg-white/10 backdrop-blur-sm border-b-2 border-white/30 focus:border-white text-white placeholder-gray-300 focus:outline-none transition-all duration-300 focus:bg-white/15 hover:bg-white/15 resize-none"
+                      className="w-full px-4 py-3 rounded-md bg-[#292929] backdrop-blur-sm border-b-2 border-white/30 focus:border-white text-white placeholder-gray-300 focus:outline-none transition-all duration-300 focus:bg-white/15 hover:bg-white/15 resize-none"
                     ></textarea>
                   </div>
                   <button

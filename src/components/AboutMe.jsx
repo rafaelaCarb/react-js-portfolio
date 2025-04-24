@@ -93,7 +93,7 @@ const AboutMe = () => {
   return (
     <div ref={containerRef} className="w-screen flex flex-col bg-white">
       <div className="h-fit py-7 w-full bg-black text-white px-4 flex flex-col md:flex-row justify-between pt-9">
-        <h1 className="text-[8vw] sm:text-[100px]">
+        <h1 className="text-[8vw] sm:text-[100px] ms-4">
           <span ref={titleRef}>Sobre</span>
         </h1>
         <div className="w-full px-4 md:w-4/6 pt-3 space-y-10 md:space-y-24">

@@ -56,7 +56,7 @@ const Hero = () => {
         <img
           src={ia}
           alt="IA"
-          className="z-20 absolute bottom-0 left-1/2 -translate-x-1/2 w-[100vw] sm:w-[400px] md:w-[700px] lg:w-[870px] max-h-[90%] object-contain"
+          className="z-20 absolute bottom-0 left-1/2 -translate-x-1/2 w-[100vw] sm:w-[600px] md:w-[700px] lg:w-[870px] max-h-[90%] object-contain"
         />
       </div>
     </div>
