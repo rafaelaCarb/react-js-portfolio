@@ -9,7 +9,6 @@ const Parallax = () => {
         <Hero />
         <div className="relative">
           {" "}
-          {/* Ensures MyProjects appears after scrolling */}
           <AboutMe />
         </div>
       </main>

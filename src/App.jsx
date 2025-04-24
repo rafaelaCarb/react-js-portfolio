@@ -3,7 +3,7 @@ import Parallax from "./components/Parallax";
 import MyProjects from "./components/MyProjects";
 import Lenis from "lenis";
 import { useEffect } from "react";
-
+import ContactMe from "./components/ContactMe";
 const App = () => {
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const App = () => {
     <>
       <Parallax />
       <MyProjects />
+      <ContactMe />
     </>
   );
 };
