@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "postdeploy": "echo 'Acesse: https://rafaelaCarb.github.io/react-js-portfolio/'"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
