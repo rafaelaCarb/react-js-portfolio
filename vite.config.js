@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
-export default ({
+export default defineConfig({
   base: '/react-js-portfolio/',
-  plugins: [
-    tailwindcss(),
-  ],
+  plugins: [tailwindcss()],
 })
