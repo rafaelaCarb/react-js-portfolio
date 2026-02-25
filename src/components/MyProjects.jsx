@@ -10,6 +10,7 @@ import vs from "../assets/vs.png";
 import dx from "../assets/dx.png";
 import ecommerce from "../assets/ecommerce.png";
 import perfumaria from "../assets/perfumaria.png";
+import voors from "../assets/voors.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,28 +25,50 @@ const MyProjects = () => {
 
   const data = [
     {
+      id: 1,
+      title: "Sistema ERP — Voors",
+      subtitle:
+        "Ferramentas com IA, modernização de módulos e evolução de legados.",
+      img: voors,
+      icons: [FaReact, TbBrandTypescript],
+      tags: ["ERP", "React", "TypeScript", "Tailwind CSS"],
+      badge: "Corporativo",
+    },
+    {
       id: 2,
-      title: "Landing Page — Visioncar, Website",
+      title: "Landing Page — Visioncar",
+      subtitle: "Website institucional focado em apresentação de servicos.",
       img: vs,
       icons: [FaReact, RiJavascriptLine],
+      tags: ["Landing Page", "React", "JavaScript"],
+      badge: "Website",
     },
     {
       id: 3,
-      title: "Landing Page — DxBrasil, Website",
+      title: "Landing Page — DxBrasil",
+      subtitle: "Pagina institucional com layout responsivo e estrutura leve.",
       img: dx,
       icons: [FaReact, RiJavascriptLine],
+      tags: ["Landing Page", "React", "JavaScript"],
+      badge: "Website",
     },
     {
       id: 4,
-      title: "ReactTs — Ecommerce de Roupas",
+      title: "ReactTS — Ecommerce de Roupas",
+      subtitle: "Projeto de estudo com foco em componentização e fluxo de compra.",
       img: ecommerce,
       icons: [FaReact, TbBrandTypescript],
+      tags: ["Ecommerce", "React", "TypeScript"],
+      badge: "Projeto pessoal",
     },
     {
-      id: 1,
+      id: 5,
       title: "Bootstrap — Projeto Perfumaria",
+      subtitle: "Landing page simples para praticar layout e grid.",
       img: perfumaria,
       icons: [FaReact],
+      tags: ["Landing Page", "Bootstrap"],
+      badge: "Projeto pessoal",
     },
   ];
 
@@ -155,11 +178,13 @@ const MyProjects = () => {
 
   return (
     <div className="h-full w-screen px-4 overflow-x-hidden">
-      <div className="w-full flex py-10 border-b items-center justify-start">
-        <CornerRightDown size={70} className="hidden md:block" />
-        <h1 ref={titleRef} className="text-5xl md:text-[80px]">
-          Projetos
-        </h1>
+      <div className="w-full py-10 border-b">
+        <div className="flex items-center gap-4">
+          <CornerRightDown size={70} className="hidden md:block" />
+          <h1 ref={titleRef} className="text-5xl md:text-[80px]">
+            Projetos
+          </h1>
+        </div>
       </div>
 
       <div className="flex items-start justify-center">
@@ -169,23 +194,39 @@ const MyProjects = () => {
               onMouseEnter={() => !isMobile && setMouseIn(index + 1)}
               onMouseLeave={() => !isMobile && setMouseIn(false)}
               key={work.id}
-              className="flex flex-col md:flex-row justify-between group p-6 md:p-10 border-b cursor-pointer hover:bg-black hover:text-white"
+              className="flex flex-col md:flex-row justify-between group p-6 md:p-10 border-b cursor-pointer transition-colors hover:bg-black hover:text-white"
             >
-              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+              <div className="flex flex-col gap-4">
                 {isMobile && (
-                  <div 
-                    className="bg-center bg-cover h-40 w-full mb-4 rounded-md"
+                  <div
+                    className="bg-center bg-cover h-40 w-full rounded-xl ring-1 ring-black/10"
                     style={{ backgroundImage: `url(${work.img})` }}
                   />
                 )}
-                
-                <div className="flex items-center gap-2">
+
+                <div className="flex flex-wrap items-center gap-2">
                   {work.icons.map((Icon, i) => (
-                    <Icon key={i} size={25} />
+                    <Icon key={i} size={22} />
                   ))}
                   <h1 className="text-xl md:text-2xl font-light capitalize">
                     {work.title}
                   </h1>
+                  <span className="text-xs uppercase tracking-[0.25em] text-gray-500 group-hover:text-white/60">
+                    {work.badge}
+                  </span>
+                </div>
+                <p className="text-sm md:text-base text-gray-600 group-hover:text-white/70 max-w-2xl">
+                  {work.subtitle}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {work.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 rounded-full border border-black/10 text-xs text-gray-600 group-hover:text-white group-hover:border-white/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
               <button className="mt-4 md:mt-0 text-xs rounded-sm p-2 border flex gap-1 bg-white text-black self-start md:self-center">

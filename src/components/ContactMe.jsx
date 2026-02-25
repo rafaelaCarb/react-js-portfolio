@@ -51,10 +51,26 @@ const ContactMe = () => {
                 Vamos criar algo incrível juntos!
                 <span className="absolute -bottom-2 left-0 w-24 h-1 bg-white/60"></span>
               </h2>
-              <p className="text-gray-300 mt-4 flex items-center">
-                <span className="inline-block w-6 h-0.5 bg-white/40 mr-3"></span>
-                rafaelacarbelimbandeira@gmail.com
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                Tem um projeto em mente ou quer conversar sobre uma oportunidade?
+                Me envie uma mensagem com detalhes e respondo assim que possível.
               </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/50">
+                    E-mail
+                  </p>
+                  <p className="mt-2 text-sm md:text-base">
+                    rafaelacarbelimbandeira@gmail.com
+                  </p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/50">
+                    Localizacao
+                  </p>
+                  <p className="mt-2 text-sm md:text-base">São José dos Campos, SP</p>
+                </div>
+              </div>
             </div>
             <div className="w-full md:w-1/2">
                 <form className="space-y-6" ref={ref} onSubmit={handleSubmit}>
