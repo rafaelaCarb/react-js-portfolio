@@ -7,13 +7,29 @@ import ContactMe from "./components/ContactMe";
 const App = () => {
 
   useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
+    const isTouchDevice =
+      window.matchMedia("(pointer: coarse)").matches ||
+      window.matchMedia("(hover: none)").matches;
+
+    if (isTouchDevice) return;
+
+    const lenis = new Lenis({
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+
+    let rafId;
+    const raf = (time) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  });
+      rafId = requestAnimationFrame(raf);
+    };
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <>
