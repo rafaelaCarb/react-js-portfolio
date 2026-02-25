@@ -42,7 +42,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="h-[120vh] overflow-hidden">
+    <div className="min-h-screen md:h-[120vh] overflow-visible md:overflow-hidden">
       <div className="grid-dark w-full h-fit py-12 rounded-xl md:ml-13 mt-24">
         <div className="container mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-16">
