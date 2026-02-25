@@ -177,11 +177,11 @@ const MyProjects = () => {
   }, [mousePosition, cursorPosition, isMobile]);
 
   return (
-    <div className="h-full w-screen px-4 overflow-x-hidden">
+    <div className="h-full w-screen px-3 sm:px-4 overflow-x-hidden">
       <div className="w-full py-10 border-b">
         <div className="flex items-center gap-4">
           <CornerRightDown size={70} className="hidden md:block" />
-          <h1 ref={titleRef} className="text-5xl md:text-[80px]">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl md:text-[80px]">
             Projetos
           </h1>
         </div>
@@ -194,12 +194,12 @@ const MyProjects = () => {
               onMouseEnter={() => !isMobile && setMouseIn(index + 1)}
               onMouseLeave={() => !isMobile && setMouseIn(false)}
               key={work.id}
-              className="flex flex-col md:flex-row justify-between group p-6 md:p-10 border-b cursor-pointer transition-colors hover:bg-black hover:text-white"
+              className="flex flex-col md:flex-row justify-between group p-5 sm:p-6 md:p-10 border border-black/10 md:border-b md:border-black/10 md:border-x-0 md:border-t-0 cursor-pointer transition-colors md:hover:bg-black md:hover:text-white rounded-2xl md:rounded-none bg-white md:bg-transparent shadow-sm md:shadow-none mb-4 md:mb-0"
             >
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3 sm:gap-4">
                 {isMobile && (
                   <div
-                    className="bg-center bg-cover h-40 w-full rounded-xl ring-1 ring-black/10"
+                    className="bg-center bg-cover h-44 sm:h-48 w-full rounded-xl ring-1 ring-black/10"
                     style={{ backgroundImage: `url(${work.img})` }}
                   />
                 )}
@@ -211,25 +211,25 @@ const MyProjects = () => {
                   <h1 className="text-xl md:text-2xl font-light capitalize">
                     {work.title}
                   </h1>
-                  <span className="text-xs uppercase tracking-[0.25em] text-gray-500 group-hover:text-white/60">
+                  <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gray-500 md:group-hover:text-white/60">
                     {work.badge}
                   </span>
                 </div>
-                <p className="text-sm md:text-base text-gray-600 group-hover:text-white/70 max-w-2xl">
+                <p className="text-sm sm:text-base text-gray-600 md:group-hover:text-white/70 max-w-2xl">
                   {work.subtitle}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {work.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 rounded-full border border-black/10 text-xs text-gray-600 group-hover:text-white group-hover:border-white/20"
+                      className="px-2 sm:px-3 py-1 rounded-full border border-black/10 text-[10px] sm:text-xs text-gray-600 md:group-hover:text-white md:group-hover:border-white/20"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-              <button className="mt-4 md:mt-0 text-xs rounded-sm p-2 border flex gap-1 bg-white text-black self-start md:self-center">
+              <button className="mt-4 md:mt-0 text-xs rounded-sm p-2 border flex gap-1 bg-white text-black self-stretch md:self-center justify-center w-full md:w-auto">
                 <LockKeyhole size={14} />
                 CONTATE PARA DETALHES
               </button>
